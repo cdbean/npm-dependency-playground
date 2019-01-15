@@ -1,0 +1,10 @@
+## Basic setting
+
+App has dependency on moduleA@v1, moduleB@v1, and moduleC@v1
+
+module A, B, C do not have dependency on each other
+
+## Result
+npm installs moduleA, moduleB, moduleC under `node_modules`
+
+bundling: webpack bundles each module in `dist/index.js` once (search for e.g. `testModuleA` in `app/dist/index.js`)
