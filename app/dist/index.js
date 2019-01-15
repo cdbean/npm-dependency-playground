@@ -94,7 +94,19 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return b; });\nfunction b() {\n  console.log('testModuleB')\n}\n\n\n//# sourceURL=webpack:///../moduleB/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return b; });\n/* harmony import */ var moduleA__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! moduleA */ \"../moduleB/node_modules/moduleA/index.js\");\n\nfunction b() {\n  console.log('call moduleA within moduleB')\n  Object(moduleA__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n  console.log('testModuleB')\n}\n\n\n//# sourceURL=webpack:///../moduleB/index.js?");
+
+/***/ }),
+
+/***/ "../moduleB/node_modules/moduleA/index.js":
+/*!************************************************!*\
+  !*** ../moduleB/node_modules/moduleA/index.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return a; });\nfunction a() {\n  console.log('testModuleA@v1')\n}\n\n\n//# sourceURL=webpack:///../moduleB/node_modules/moduleA/index.js?");
 
 /***/ }),
 
